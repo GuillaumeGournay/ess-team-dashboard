@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+html * {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #333333; 
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+// TEXT STYLE
+h2 {	
+    font-weight: 700;
+	font-size: 1.2em;
+	letter-spacing: -1px;
+    color: #333333; 
+}
+
+h3 {	
+    font-weight: 700;
+	font-size: 1.2em;
+    color: #262626; 
+}

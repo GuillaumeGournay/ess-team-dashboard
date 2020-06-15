@@ -1,0 +1,133 @@
+.main-container {
+    background-color: rgb(246, 250, 255);
+    // background-color: rgb(100, 151, 212);
+    // min-height: 100vh;
+    display: block;
+    padding: 20px;
+}
+
+h2 {
+    margin: 0px 10px;
+    padding: 8px 0px;
+    border-bottom: solid 1px rgb(196, 196, 196);
+    font-size: 1.1em;
+}
+
+.main-container > div {
+    box-shadow: 0px 0px 3px 1px rgb(196, 196, 196);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    min-height: 300px;
+}
+
+
+// RESPONSIVE IPAD
+@media screen and (min-width: 768px) {
+    
+    .main-container {
+        min-height: 94vh;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        gap: 20px;
+    }
+    
+    .main-container > div {
+        min-height: 0; // à virer une fois le contenu ajouté
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+    }
+    
+    .movies-list {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .semi-cercle {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .actresses {
+        grid-column: 3;
+        grid-row: 1;   
+    }
+    .actors {
+        grid-column: 1;
+        grid-row: 4;   
+    }
+    .big-box {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;  
+        grid-row-end: 4;  
+    }
+    .categories {
+        grid-column: 2;
+        grid-row: 4;   
+    }
+    .duration {
+        grid-column: 3;
+        grid-row: 4;   
+    }
+
+}
+
+
+// RESPONSIVE LAPTOP
+@media screen and (min-width: 1200px) {
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    .main-container {
+        min-height: 94vh;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+    }
+    
+    .main-container > div {
+        min-height: 0; // à virer une fois le contenu ajouté
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+    }
+    
+    .movies-list {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .semi-cercle {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .actresses {
+        grid-column: 3;
+        grid-row: 1;   
+    }
+    .actors {
+        grid-column: 4;
+        grid-row: 1;   
+    }
+    .big-box {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;  
+        grid-row-end: 4;  
+    }
+    .categories {
+        grid-column: 4;
+        grid-row: 2;   
+    }
+    .duration {
+        grid-column: 4;
+        grid-row: 3;   
+    }
+
+}
