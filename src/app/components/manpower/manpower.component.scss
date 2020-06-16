@@ -1,0 +1,21 @@
+.line-chart {
+    padding-top: 30px;
+    width: 85%;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .line-chart {
+        padding-top: 20px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .line-chart {
+        padding-top: 30px;
+        width: 85%;
+        margin: auto;
+    }
+}
