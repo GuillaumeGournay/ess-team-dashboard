@@ -1,7 +1,5 @@
 .main-container {
     background-color: rgb(246, 250, 255);
-    // background-color: rgb(100, 151, 212);
-    // min-height: 100vh;
     display: block;
     padding: 20px;
 }
@@ -9,16 +7,54 @@
 h2 {
     margin: 0px 10px;
     padding: 8px 0px;
-    border-bottom: solid 1px rgb(196, 196, 196);
+    width: 95%;
+    border-bottom: solid 1px #dee2e6;
     font-size: 1.1em;
 }
+
+.twitter {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0, -50%);
+}
+
+.followers {
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(0, -50%);
+}
+
+.followers-update {
+    font-size: 0.85em;
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    transform: translate(0, -50%);
+}
+
 
 .main-container > div {
     box-shadow: 0px 0px 3px 1px rgb(196, 196, 196);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
-    min-height: 300px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 250px;
+}
+
+.staff-list {
+    height: 500px;
+}
+
+.staff-list > h2 {
+    border-style: none;
 }
 
 
@@ -31,6 +67,8 @@ h2 {
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto auto;
+        grid-template-columns: 30vw 30vw 30vw;
+        grid-template-rows: 20vh 20vh 20vh 20vh;
         gap: 20px;
     }
     
@@ -41,36 +79,66 @@ h2 {
         margin-bottom: 0;
     }
     
-    .movies-list {
+    .staff-list {
         grid-column-start: 1;
         grid-row-start: 1;
         grid-row-end: 4;
+        // min-width: 33vw;
     }
-    .semi-cercle {
+
+    .turnover {
         grid-column: 2;
         grid-row: 1;
     }
-    .actresses {
+
+    .manpower {
         grid-column: 3;
         grid-row: 1;   
     }
-    .actors {
+
+    .genders {
         grid-column: 1;
         grid-row: 4;   
     }
-    .big-box {
+
+    .productivity {
         grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-end: 4;
         grid-row-start: 2;  
         grid-row-end: 4;  
+        max-width: 66vw;
     }
-    .categories {
+
+    .sales {
         grid-column: 2;
         grid-row: 4;   
     }
-    .duration {
+
+    .social {
         grid-column: 3;
         grid-row: 4;   
+    }
+
+    .twitter {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .followers {
+        font-weight: bold;
+        font-size: 1.3em;
+        position: absolute;
+        top: 45%;
+        left: 55%;
+        transform: translate(0, -50%);
+    }
+    
+    .followers-update {
+        font-size: 0.7em;
+        position: absolute;
+        top: 55%;
+        left: 45%;
+        transform: translate(0, -50%);
     }
 
 }
@@ -80,54 +148,108 @@ h2 {
 @media screen and (min-width: 1200px) {
     h2 {
         font-size: 1.2em;
+        position: absolute;
+        top: 0px;
     }
     
     .main-container {
         min-height: 94vh;
         padding: 20px;
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto auto auto;
-        gap: 20px;
+        grid-template-columns: 23.5vw 23.5vw 23.5vw 23.5vw;
+        grid-template-rows: 28.4vh 28.4vh 28.4vh ;
+        gap: 1vw;
     }
     
     .main-container > div {
-        min-height: 0; // à virer une fois le contenu ajouté
-        width: auto;
-        height: auto;
         margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
     }
     
-    .movies-list {
+    .staff-list {
         grid-column-start: 1;
         grid-row-start: 1;
         grid-row-end: 4;
+        position: relative;
+        // min-width: 22.5vw;
+        // min-height: 30vh;
     }
-    .semi-cercle {
+
+    .turnover {
         grid-column: 2;
         grid-row: 1;
+        // min-width: 22.5vw;
+        // height: 258px !important;
     }
-    .actresses {
+
+    .manpower {
         grid-column: 3;
-        grid-row: 1;   
+        grid-row: 1;
+        // min-width: 22.5vw;
+        // height: 258px !important;
     }
-    .actors {
+
+    .genders {
         grid-column: 4;
-        grid-row: 1;   
+        grid-row: 1;
+        // min-width: 22.5vw; 
+        // height: 258px !important;
     }
-    .big-box {
+
+    .productivity {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 2;  
-        grid-row-end: 4;  
+        grid-row-end: 4; 
+        // max-width: 50vw;
     }
-    .categories {
+
+    .sales {
         grid-column: 4;
-        grid-row: 2;   
+        grid-row: 2; 
+        // min-width: 22.5vw; 
+        // min-height: 30vh;
     }
-    .duration {
+
+    .social {
         grid-column: 4;
-        grid-row: 3;   
+        grid-row: 3;  
+        display: flex;
+        flex-direction: row !important;
+        justify-content: start !important;
+        align-items: center;
+        position: relative;
+        // min-width: 22.5vw; 
+        // min-height: 30vh;
+    }
+
+    .twitter {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 18%;
+        transform: translate(0, -50%);
+    }
+    
+    .followers {
+        font-weight: bold;
+        font-size: 1.5em;
+        position: absolute;
+        top: 45%;
+        left: 55%;
+        transform: translate(0, -50%);
+    }
+    
+    .followers-update {
+        font-size: 0.85em;
+        position: absolute;
+        top: 55%;
+        left: 45%;
+        transform: translate(0, -50%);
     }
 
 }

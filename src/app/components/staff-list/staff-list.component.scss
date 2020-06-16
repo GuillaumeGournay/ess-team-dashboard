@@ -1,0 +1,11 @@
+table {
+    position: absolute;
+    top: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    td {
+        padding: 8px !important;
+        font-size: 0.8em;
+    }
+}
